@@ -146,7 +146,7 @@ module "rancher_common" {
   node_username         = var.username
   ssh_private_key_pem   = tls_private_key.global_key.private_key_pem
   rancher_version       = var.rancher_version
-  rancher_server_dns    = "169.254.169.253"
+  rancher_server_dns    = join(".", ["rancher", aws_instance.server.public_ip, "sslip.io"])
   admin_password        = random_password.rancher_admin_password.result
   workload_cluster_name = var.name
 }

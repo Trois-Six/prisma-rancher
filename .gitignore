@@ -18,5 +18,6 @@ terraform.rc
 ## Generated
 
 kube_config_server.yaml
+kube_config_workload.yaml
 id_rsa
 id_rsa.pub
